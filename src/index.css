@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { /* Material Design 3 tokens (green) */
+    --md-sys-color-primary: #266e42;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #A6F3B8;
+    --md-sys-color-on-primary-container: #00210D;
+    --md-sys-color-background: #FBFDF7;
+    --md-sys-color-on-background: #1A1C19;
+    --md-sys-color-surface: #FDFDF6;
+    --md-sys-color-on-surface: #1A1C19;
+    --md-sys-color-surface-variant: #E0E4D9;
+    --md-sys-color-on-surface-variant: #43483E;
+    --md-sys-color-outline: #73796E;
+    --md-radius: 12px;
+  }
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 3.9%;
+    
+    --primary: 147 49% 29%;
+    --primary-foreground: 355.7 100% 97.3%;
+    
+    --secondary: 150 4.8% 95.9%;
+    --secondary-foreground: 150 5.9% 10%;
+    
+    --muted: 150 4.8% 95.9%;
+    --muted-foreground: 150 3.8% 46.1%;
+    
+    --accent: 150 4.8% 95.9%;
+    --accent-foreground: 150 5.9% 10%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 5.9% 90%;
+    --input: 150 5.9% 90%;
+    --ring: 147 49% 29%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.time-minimum {
+  @apply font-bold text-[#1E90FF];
+}
+
+.time-normal {
+  @apply font-bold text-[#006400];
+}
+
+.time-maximum {
+  @apply font-bold text-[#FF4500];
+}
+
+.time-extra {
+  @apply font-bold text-[#800080];
+}
+
+.nav-button {
+  @apply w-full max-w-sm px-8 py-4 text-lg font-medium text-white transition-colors rounded-lg shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#266e42];
+}
+
+.input-time {
+  @apply w-full px-4 py-2 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#266e42] bg-white/50 backdrop-blur-sm;
+}
+
+.page-container {
+  @apply flex flex-col items-center min-h-screen p-6 space-y-6 bg-gradient-to-br from-[#e9f6ef] to-[#dff0e7];
+}
+
+.back-button {
+  @apply px-6 py-2 text-sm font-medium text-[#266e42] transition-colors bg-green-100 rounded-lg hover:bg-[#cfe8db] focus:outline-none focus:ring-2 focus:ring-[#266e42];
+}
